@@ -1,0 +1,75 @@
+﻿  main.cpp
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\main.cpp(30,18): warning C4305: “初始化”: 从“double”到“float”截断
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\main.cpp(115,37): warning C4244: “参数”: 从“float”转换到“Sint16”，可能丢失数据
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\main.cpp(115,33): warning C4244: “参数”: 从“float”转换到“Sint16”，可能丢失数据
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\main.cpp(115,29): warning C4244: “参数”: 从“float”转换到“Sint16”，可能丢失数据
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\main.cpp(116,38): warning C4244: “参数”: 从“float”转换到“Sint16”，可能丢失数据
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\main.cpp(116,33): warning C4244: “参数”: 从“float”转换到“Sint16”，可能丢失数据
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\main.cpp(116,29): warning C4244: “参数”: 从“float”转换到“Sint16”，可能丢失数据
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\main.cpp(340,30): warning C4244: “初始化”: 从“Sint32”转换到“float”，可能丢失数据
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\main.cpp(341,30): warning C4244: “初始化”: 从“Sint32”转换到“float”，可能丢失数据
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\main.cpp(274,9): warning C4101: “status”: 未引用的局部变量
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\vector2.h(41,14): warning C4244: “return”: 从“double”转换到“T”，可能丢失数据
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\vector2.h(41,14): warning C4244:         with
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\vector2.h(41,14): warning C4244:         [
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\vector2.h(41,14): warning C4244:             T=float
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\vector2.h(41,14): warning C4244:         ]
+  (编译源文件“src/main.cpp”)
+      C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\vector2.h(41,14):
+      模板实例化上下文(最早的实例化上下文)为
+          C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\main.cpp(49,24):
+          查看对正在编译的 类 模板 实例化“vector2<T>”的引用
+          with
+          [
+              T=float
+          ]
+          C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\vector2.h(40,4):
+          在编译 类 模板 成员函数“T vector2<T>::length(void) const”时
+          with
+          [
+              T=float
+          ]
+              C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\main.cpp(123,2):
+              请参阅 "point_in_nid" 中对 "vector2<T>::length" 的第一个引用
+          with
+          [
+              T=float
+          ]
+  
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\boidsystem.h(40,13): warning C4244: “参数”: 从“double”转换到“const T”，可能丢失数据
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\boidsystem.h(40,13): warning C4244:         with
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\boidsystem.h(40,13): warning C4244:         [
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\boidsystem.h(40,13): warning C4244:             T=float
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\boidsystem.h(40,13): warning C4244:         ]
+  (编译源文件“src/main.cpp”)
+      C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\boidsystem.h(40,13):
+      模板实例化上下文(最早的实例化上下文)为
+          C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\main.cpp(41,17):
+          查看对正在编译的 类 模板 实例化“BSystem<float>”的引用
+          C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\boidsystem.h(93,30):
+          在编译 类 模板 成员函数“void BSystem<float>::do_update(void)”时
+              C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\main.cpp(159,24):
+              请参阅 "do_update" 中对 "BSystem<float>::do_update" 的第一个引用
+          C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\boidsystem.h(28,61):
+          在编译 类 模板 成员函数“vector2<T> BSystem<T>::ruleCohesion(const boid<T> &,T)”时
+          with
+          [
+              T=float
+          ]
+  
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\boidsystem.h(59,18): warning C4244: “参数”: 从“double”转换到“const T”，可能丢失数据
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\boidsystem.h(59,18): warning C4244:         with
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\boidsystem.h(59,18): warning C4244:         [
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\boidsystem.h(59,18): warning C4244:             T=float
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\boidsystem.h(59,18): warning C4244:         ]
+  (编译源文件“src/main.cpp”)
+      C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\boidsystem.h(59,18):
+      模板实例化上下文(最早的实例化上下文)为
+          C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\ant-war\src\boidsystem.h(47,62):
+          在编译 类 模板 成员函数“vector2<T> BSystem<T>::ruleAlignment(const boid<T> &,T)”时
+          with
+          [
+              T=float
+          ]
+  
+  ant-war.vcxproj -> C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\x64\Debug\ant-war.exe

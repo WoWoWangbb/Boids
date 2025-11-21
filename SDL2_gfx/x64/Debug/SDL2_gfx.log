@@ -1,0 +1,9 @@
+﻿  SDL2_framerate.c
+  SDL2_gfxPrimitives.c
+  SDL2_imageFilter.c
+C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\SDL2_gfx\src\SDL2_gfxPrimitives_font.h(1559,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (编译源文件“src/SDL2_gfxPrimitives.c”)
+  
+  SDL2_rotozoom.c
+  正在生成代码...
+  SDL2_gfx.vcxproj -> C:\Users\99468\Downloads\ant-war-root-win\ant-war-root\x64\Debug\SDL2_gfx.lib

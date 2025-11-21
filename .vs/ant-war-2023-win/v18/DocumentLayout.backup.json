@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\99468\\Downloads\\ant-war-root-win\\ant-war-root\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4B370052-AC5A-4B71-87F1-AD5713CA40B7}|ant-war\\ant-war.vcxproj|C:\\USERS\\99468\\DOWNLOADS\\ANT-WAR-ROOT-WIN\\ANT-WAR-ROOT\\ANT-WAR\\SRC\\CONFIG.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4B370052-AC5A-4B71-87F1-AD5713CA40B7}|ant-war\\ant-war.vcxproj|solutionrelative:ANT-WAR\\SRC\\CONFIG.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B370052-AC5A-4B71-87F1-AD5713CA40B7}|ant-war\\ant-war.vcxproj|C:\\Users\\99468\\Downloads\\ant-war-root-win\\ant-war-root\\ant-war\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4B370052-AC5A-4B71-87F1-AD5713CA40B7}|ant-war\\ant-war.vcxproj|solutionrelative:ant-war\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF6D411A-B1F8-44C9-9582-63947065B2EA}|SDL2_gfx\\SDL2_gfx.vcxproj|C:\\Users\\99468\\Downloads\\ant-war-root-win\\ant-war-root\\SDL2_gfx\\src\\SDL2_framerate.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CF6D411A-B1F8-44C9-9582-63947065B2EA}|SDL2_gfx\\SDL2_gfx.vcxproj|solutionrelative:SDL2_gfx\\src\\SDL2_framerate.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "config.h",
+              "DocumentMoniker": "C:\\Users\\99468\\Downloads\\ant-war-root-win\\ant-war-root\\ant-war\\src\\config.h",
+              "RelativeDocumentMoniker": "ant-war\\src\\config.h",
+              "ToolTip": "C:\\Users\\99468\\Downloads\\ant-war-root-win\\ant-war-root\\ant-war\\src\\config.h*",
+              "RelativeToolTip": "ant-war\\src\\config.h*",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-21T08:28:49.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\99468\\Downloads\\ant-war-root-win\\ant-war-root\\ant-war\\src\\main.cpp",
+              "RelativeDocumentMoniker": "ant-war\\src\\main.cpp",
+              "ToolTip": "C:\\Users\\99468\\Downloads\\ant-war-root-win\\ant-war-root\\ant-war\\src\\main.cpp",
+              "RelativeToolTip": "ant-war\\src\\main.cpp",
+              "ViewState": "AgIAACUBAAAAAAAAAAAswCgBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-21T07:12:07.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SDL2_framerate.c",
+              "DocumentMoniker": "C:\\Users\\99468\\Downloads\\ant-war-root-win\\ant-war-root\\SDL2_gfx\\src\\SDL2_framerate.c",
+              "RelativeDocumentMoniker": "SDL2_gfx\\src\\SDL2_framerate.c",
+              "ToolTip": "C:\\Users\\99468\\Downloads\\ant-war-root-win\\ant-war-root\\SDL2_gfx\\src\\SDL2_framerate.c",
+              "RelativeToolTip": "SDL2_gfx\\src\\SDL2_framerate.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-11-20T20:04:05.653Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
