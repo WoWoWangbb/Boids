@@ -1,6 +1,8 @@
 # ifndef  VECTOR_2
 # define  VECTOR_2
 #include "config.h"
+#include <cmath>
+
 template <typename T>
 struct vector2 {
 	T x, y;
@@ -38,7 +40,7 @@ struct vector2 {
 		return { x / l, y / l };
 	}
 	T length() const {
-		return sqrt(x * x + y * y);
+		return std::sqrt(x * x + y * y);
 	}
 };
 

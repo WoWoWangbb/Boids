@@ -11,10 +11,9 @@
 //#include <SDL2/SDL2_gfxPrimitives.h>
 
 #endif
-//#include "boids.h"
+
 #include "config.h"
 #include "boidsystem.h"
-#include "it_s_work.h"
 using namespace std;
 #include <iostream>
 #include <random>
@@ -43,7 +42,7 @@ struct global_t {
 
 global_t g;
 
-// init boids
+
 void init_boids() {
 	g.boidSystem.add_boid({ 100,100 }, { 1,0 });
 	g.boidSystem.add_boid({ 200,100 }, { -1,0 });
@@ -82,31 +81,26 @@ void draw_boid(SDL_Renderer* renderer, vector2<float> pos, vector2<float> vel, f
 	vector2<float> tp2 = rotate(p2) + pos;
 	vector2<float> tp3 = rotate(p3) + pos;
 
-	// --- 1. fill the polygen ---
+	// fill the polygen 
 	filledTrigonRGBA(renderer,
 		(Sint16)tp1.x, (Sint16)tp1.y,
 		(Sint16)tp2.x, (Sint16)tp2.y,
 		(Sint16)tp3.x, (Sint16)tp3.y,
-		0, 255, 255, 128); 
+		0, 255, 255, 128);
 
-	// --- 2. draw outlines ---
+	//  draw outlines 
 	trigonRGBA(renderer,
 		(Sint16)tp1.x, (Sint16)tp1.y,
 		(Sint16)tp2.x, (Sint16)tp2.y,
 		(Sint16)tp3.x, (Sint16)tp3.y,
-		0, 0, 128, 255);   
+		0, 0, 128, 255);
 }
+
 
 void draw_nid(SDL_Renderer* renderer,  float size = Config::NID_SIZE) {
 	float r = size / 2.0f;
 
 	vector2<float> pos{ Config::TARGET_X, Config::TARGET_Y };
-	//if (Config::DRAG_NID) {
-	//	// nid pulsation effect
-
-	//	vector2<float> pos{TARGET_X, TARGET_Y };
-	//}
-	//
 	float cx = (Sint16)pos.x;
 	float cy = (Sint16)pos.y;
 
@@ -122,17 +116,6 @@ bool point_in_nid(vector2<float> point, float size = Config::NID_SIZE) {
 	return (diff.length() <= r);
 }
 
-//void paint_it_s_work(int ox, int oy, int scale = 20) {
-//	SDL_SetRenderDrawColor(g.renderer, 0u, 0u, 0u, SDL_ALPHA_OPAQUE);
-//	for (int j = 0; j < px::height; ++j) {
-//		for (int i = 0; i < px::width; ++i) {
-//			if (px::header_data[j*px::width+i] == 0) {
-//				SDL_Rect r = { i*scale+ox, j*scale+oy, 20, 20 };
-//				SDL_RenderFillRect(g.renderer, &r);
-//			}
-//		}
-//	}
-//}
 
 // tp
 void do_render() {
@@ -149,11 +132,12 @@ void do_render() {
 		draw_boid(g.renderer, b.position, b.velocity);
 		cout << "Boid at (" << b.position.x << ", " << b.position.y << ") with velocity (" << b.velocity.x << ", " << b.velocity.y << ")\n";
 	}
+
 	if (Config::cible_MODE)   draw_nid(g.renderer);  
 	SDL_RenderPresent(g.renderer);
 }
 
-// tp template heritage exception
+
 void do_update() {
 	g.boidSystem.do_update();
 }

@@ -27,7 +27,6 @@ struct Config{
 		static  float TARGET_X;  //default = 100.0f;
         static  float TARGET_Y ; //default = 100.0f;
 		static constexpr float NID_SIZE = 200.0f;
-		static constexpr bool DRAG_NID = false; // if true, user can drag the nid with mouse
-
+		static constexpr bool DRAG_NID = true; // if true, user can drag the nid with mouse
 
 };

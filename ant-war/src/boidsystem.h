@@ -5,7 +5,7 @@
 #include "config.h"
 #include<vector>
 #include<cmath>
-
+#include <stdexcept>
 using namespace std;
 
 template<typename T>
@@ -13,6 +13,11 @@ class BSystem {
 public:
 	vector<boid<T>> boids;
 	void add_boid(vector2<T> const& position, vector2<T> const& velocity) {
+		if (!std::isfinite(position.x) || !std::isfinite(position.y) ||
+			!std::isfinite(velocity.x) || !std::isfinite(velocity.y))
+		{
+			throw invalid_argument("BSystem::add_boid : position or velocity contains NaN/Inf");
+		}
 		boids.push_back({ position, velocity, {0, 0} });
 	}
 	void do_update();
@@ -43,6 +48,7 @@ vector2<T> BSystem<T>::ruleCohesion(const boid<T>& b, T kc) {
 	return { 0,0 };
 }
 
+
 template<typename T>
 vector2<T> BSystem<T>::ruleAlignment(const boid<T>& b, T ka) {
 	vector2<T> avgVelocity{ 0, 0 };
@@ -61,7 +67,6 @@ vector2<T> BSystem<T>::ruleAlignment(const boid<T>& b, T ka) {
 	}
 	return { 0,0 };
 }
-
 
 template<typename T>
 vector2<T> BSystem<T>::ruleSeparation(const boid<T>& b, T ks) {
@@ -88,29 +93,36 @@ vector2<T> BSystem<T>::ruleCible(const boid<T>& b, const vector2<T>& target, T k
 	return acceleration;
 }
 
-
 template<typename T>
 void BSystem<T>::do_update() {
+
+	if (boids.empty())
+		throw std::runtime_error("do_update: no boids in system.");
 
 	for (auto& b : boids) {
 		vector2<T> c = ruleCohesion(b);
 		vector2<T> s = ruleSeparation(b);
 		vector2<T> a = ruleAlignment(b);
-		
+
 		if (Config::cible_MODE) {
-		vector2<T> nestPosition{ Config::TARGET_X, Config::TARGET_Y }; // position de la cible (nid)
-		vector2<T> t = ruleCible(b, nestPosition);
-		b.acceleration = c + a + t + s;
+			vector2<T> nestPosition{ Config::TARGET_X, Config::TARGET_Y };
+			vector2<T> t = ruleCible(b, nestPosition);
+			b.acceleration = c + a + t + s;
 		}
 		else {
 			b.acceleration = c + a + s;
 		}
 
+		if (!std::isfinite(b.acceleration.x) || !std::isfinite(b.acceleration.y))
+			throw std::runtime_error("do_update: acceleration is NaN/Inf.");
 	}
 
-
+	// update movement
 	for (auto& b : boids) {
 		b.velocity += b.acceleration;
+
+		if (!std::isfinite(b.velocity.x) || !std::isfinite(b.velocity.y))
+			throw std::runtime_error("do_update: velocity is NaN/Inf.");
 
 		T maxSpeed = 4;
 		if (b.velocity.length() > maxSpeed) {
@@ -119,16 +131,22 @@ void BSystem<T>::do_update() {
 
 		b.position += b.velocity;
 
-		// if outbound
+		if (!std::isfinite(b.position.x) || !std::isfinite(b.position.y))
+			throw std::runtime_error("do_update: position is NaN/Inf.");
+
 		int WIDTH = Config::WIDTH;
 		int HEIGHT = Config::HEIGHT;
+
+		// boundaries
+		if (WIDTH <= 0 || HEIGHT <= 0)
+			throw std::logic_error("Config::WIDTH/HEIGHT must be positive.");
+
 		if (b.position.x < 0) b.position.x += WIDTH;
 		if (b.position.x > WIDTH) b.position.x -= WIDTH;
 		if (b.position.y < 0) b.position.y += HEIGHT;
 		if (b.position.y > HEIGHT) b.position.y -= HEIGHT;
 	}
 }
-
 # endif
 
 
