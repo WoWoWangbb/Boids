@@ -24,7 +24,6 @@ Left-click anywhere in the window to add new boids.
   <img src="./add.gif" alt="add_bird_demo" width="50%">
 </div>
 
-
 ---
 
 ### 🏠 Drag the nest
