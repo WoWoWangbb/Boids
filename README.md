@@ -1,5 +1,4 @@
 # Boids 🐦🐦🐦
-This project was created as homework for MP01: *The Language of C++*.  
 A simple interactive implementation of the Boids algorithm, written in C++ and developed with Visual Studio.  
 It simulates flocking behavior and allows user interaction such as adding birds and moving the nest.
 
